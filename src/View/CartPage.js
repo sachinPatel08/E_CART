@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
-import { useParams, useLocation, NavLink } from "react-router-dom";
+import { useParams, useLocation, NavLink ,useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 import { priceFormate } from "../utils/PriceFormate";
@@ -21,6 +21,7 @@ function CartPage() {
   const cartItem = useSelector((state) => state.cart);
   const { cartItems } = cartItem;
   const [quality, setQuality] = useState();
+  const navigate = useNavigate()
   console.log(quality);
   useEffect(() => {
     if (id) {
@@ -31,6 +32,8 @@ function CartPage() {
   const handaleSubmit = (id) => {
     dispatch(removeFromCart(id));
   };
+
+  
 
   return (
     <>

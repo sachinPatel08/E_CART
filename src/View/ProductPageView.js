@@ -49,3 +49,4 @@ function ProductPageView({product}) {
 }
 
 export default ProductPageView
+

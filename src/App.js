@@ -7,16 +7,20 @@ import Header from './componant/Header';
 import SingalProduct from './View/SingalProduct';
 import CartPage from './View/CartPage';
 import Login from './componant/Login'
+import Register from './componant/Register';
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
   return (
    <Router>
     <Header/>
+    <ToastContainer/>
   <Routes>
     <Route path='/' element={<Products/>} exact/>
     <Route path='/singalProduct/:id' element={<SingalProduct/>} />
     <Route path='/cart/:id?' element={<CartPage/>} />
-    <Route path='/Login' element={<Login/>} />
+    <Route path='/Login/:id' element={<Login/>} />
+    <Route path='/register' element={<Register/>} />
    
    
   </Routes>

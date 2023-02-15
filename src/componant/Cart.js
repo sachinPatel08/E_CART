@@ -4,9 +4,7 @@ const Cart = () =>  {
    
   return (
     <>
-   <button 
-                   >
-                       Add To Cart 2</button>
+   
     </>
   )
 }
